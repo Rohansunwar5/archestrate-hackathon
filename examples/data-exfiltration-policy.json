@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DataServiceWildcard",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "dynamodb:*",
+                "rds:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SecretsAndEncryption",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Decrypt",
+                "kms:Encrypt",
+                "kms:GenerateDataKey",
+                "secretsmanager:GetSecretValue",
+                "secretsmanager:ListSecrets",
+                "cloudtrail:StopLogging",
+                "cloudtrail:DeleteTrail"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

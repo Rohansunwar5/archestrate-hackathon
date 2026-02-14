@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "IAMUserManagement",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateUser",
+                "iam:DeleteUser",
+                "iam:AttachUserPolicy",
+                "iam:PutUserPolicy",
+                "iam:CreateAccessKey"
+            ],
+            "Resource": "arn:aws:iam::123456789012:user/*"
+        },
+        {
+            "Sid": "IAMRoleManagement",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:PassRole"
+            ],
+            "Resource": "arn:aws:iam::123456789012:role/*"
+        }
+    ]
+}
